@@ -6,7 +6,7 @@ const getData = (req, res) => {
 
 const addData = (req, res) => {
   const { judul, keterangan } = req.body
-  data.push({ id: Date.now(), judul, keterangan })
+  data.push({ id: Date.now(), judul: judul, keterangan: keterangan })
   res.rest.success('Berhasil ditambah')
 }
 
