@@ -7,7 +7,7 @@ const options = {
   showDefaultMessage: true,
 }
 app.use(express.json())
-app.use(express.urlencoded())
+app.use(express.urlencoded({ extended: true }))
 app.use(restResponse(options))
 
 app.get('/', (req, res) => {
