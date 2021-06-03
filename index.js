@@ -1,4 +1,4 @@
-require('dotenv')
+require('dotenv').config()
 const express = require('express')
 const restResponse = require('express-rest-response')
 const app = express()
@@ -7,6 +7,7 @@ const options = {
   showDefaultMessage: true,
 }
 app.use(express.json())
+app.use(express.urlencoded())
 app.use(restResponse(options))
 
 app.get('/', (req, res) => {
