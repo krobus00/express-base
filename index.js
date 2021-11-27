@@ -29,7 +29,7 @@ app.use((err, req, res, next) => {
   }
   return res.rest.serverError(err.message)
 })
-const PORT = 3000 || process.env.PORT
+const PORT = 80 || process.env.PORT
 app.listen(PORT, () => {
   console.log(`Server berjalan di http://localhost:${PORT}`)
 })
